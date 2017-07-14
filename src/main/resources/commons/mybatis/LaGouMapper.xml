@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//commons.mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wei.mao.dao.LaGouDao">
+
+    <insert id="insertPosition">
+        INSERT INTO t_position(position,education,company,workYear,salary,city,companySize,financeStage) VALUES
+        <foreach collection="list" index="index" item="item" open="(" separator="),(" close=")">
+            #{item.position},#{item.education},#{item.company},#{item.workYear},#{item.salary},#{item.city},
+            #{item.companySize},#{item.financeStage}
+        </foreach>
+    </insert>
+
+    <insert id="insertDevelopment">
+        INSERT INTO t_development(position,education,company,workYear,salary,city,companySize,financeStage) VALUES
+        <foreach collection="list" index="index" item="item" open="(" separator="),(" close=")">
+            #{item.position},#{item.education},#{item.company},#{item.workYear},#{item.salary},#{item.city},
+            #{item.companySize},#{item.financeStage}
+        </foreach>
+    </insert>
+
+    <insert id="insertPositionAmount">
+        INSERT INTO t_position_amount(position,amount) VALUES
+        <foreach collection="list" index="index" item="item" open="(" separator="),(" close=")">
+            #{item.position},#{item.amount}
+        </foreach>
+    </insert>
+
+</mapper>
