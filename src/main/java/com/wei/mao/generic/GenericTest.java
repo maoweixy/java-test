@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.regex.Pattern;
 import java.util.stream.Collector;
 
 /**
@@ -13,7 +14,11 @@ import java.util.stream.Collector;
  */
 public class GenericTest {
     public static void main(String args[]){
-        Pair<String> pair = new Pair<>("1","2");
-        System.out.println(pair.getFirst());
+        String str = "en";
+        String regEx = "EN|us";
+        //Pattern pattern = Pattern.compile(regEx);
+        // 忽略大小写的写法
+         Pattern pattern = Pattern.compile(regEx, Pattern.CASE_INSENSITIVE);
+        System.out.println(pattern.matcher(str).matches());
     }
 }
