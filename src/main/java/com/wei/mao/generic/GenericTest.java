@@ -1,9 +1,12 @@
 package com.wei.mao.generic;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Optional;
 import java.util.regex.Pattern;
 import java.util.stream.Collector;
 
@@ -14,11 +17,14 @@ import java.util.stream.Collector;
  */
 public class GenericTest {
     public static void main(String args[]){
-        String str = "en";
-        String regEx = "EN|us";
+        String str = null;
+        String regEx = "null|";
         //Pattern pattern = Pattern.compile(regEx);
         // 忽略大小写的写法
          Pattern pattern = Pattern.compile(regEx, Pattern.CASE_INSENSITIVE);
-        System.out.println(pattern.matcher(str).matches());
+        System.out.println(pattern.matcher("").matches());
+
+        Optional<JSONObject> responseData = Optional.empty();
+        System.out.println(responseData.isPresent());
     }
 }

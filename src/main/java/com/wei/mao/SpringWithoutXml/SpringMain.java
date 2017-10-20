@@ -9,9 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class SpringMain {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(Config.class);
-
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         BeanWayService beanWayService = context.getBean(BeanWayService.class);
         context.close();
     }

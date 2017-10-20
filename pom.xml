@@ -9,17 +9,18 @@
         <slf4j.version>1.7.7</slf4j.version>
         <log4j2.version>2.6.1</log4j2.version>
         <!--  spring版本号 -->
-        <spring.version>4.0.2.RELEASE</spring.version>
+        <spring.version>4.3.10.RELEASE</spring.version>
         <!-- mybatis版本号 -->
         <mybatis.version>3.2.6</mybatis.version>
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <Athena-JDBC.version>1.0.RELEASE</Athena-JDBC.version>
+        <jackson.datatype.version>2.7.4</jackson.datatype.version>
         <athena_query_kika_tool>1.0.2.RELEASE</athena_query_kika_tool>
     </properties>
     <groupId>com.maowei</groupId>
-    <artifactId>utils</artifactId>
+    <artifactId>java-test</artifactId>
     <version>1.0-SNAPSHOT</version>
     <repositories>
         <repository>
@@ -123,6 +124,12 @@
         </dependency>
 
         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.kikatech</groupId>
             <artifactId>krupp</artifactId>
             <version>0.2.4.4</version>
@@ -131,6 +138,23 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson.datatype.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jdk8</artifactId>
+            <version>${jackson.datatype.version}</version>
         </dependency>
 
         <dependency>
