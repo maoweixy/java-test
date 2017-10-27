@@ -9,11 +9,9 @@ import netscape.javascript.JSUtil;
  */
 public class GenderTest {
     public static void main(String args[]) {
-        Gender gender = Gender.FEMALE;
-        System.out.println(gender);
-        String genderString = JsonUtils.serialize(gender);
-        System.out.println(genderString);
-        Gender gender1 = JsonUtils.deserialize(genderString, gender.getClass());
-        System.out.println(gender1);
+        Property property = Property.builder().gender(Gender.MALE).noise(Noise.QUIET).language(Language.ENGLISH).hasAccent(false).harsh(false).build();
+
+        System.out.println(property);
+
     }
 }
