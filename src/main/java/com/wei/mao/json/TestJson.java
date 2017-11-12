@@ -8,6 +8,7 @@ import com.wei.mao.enumTest.TypeEnumWithValue;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * @Author 毛伟
@@ -30,5 +31,8 @@ public class TestJson {
 
         System.out.println(JsonUtils.serialize(user));
         System.out.println(MAPPER.writeValueAsString(user));
+
+        List<String> list = JSON.parseArray("[]", String.class);
+        System.out.println(list.isEmpty());
     }
 }

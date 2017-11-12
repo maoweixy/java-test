@@ -336,7 +336,7 @@ public class Tag {
         for(String line; (line = br.readLine()) != null; ) {
             User user = new User();
             user.setDuid(line.substring(0,32));
-            user.setTag(toStr(line.substring(34,line.length()-1)));
+            //user.setTag(toStr(line.substring(34,line.length()-1)));
             user.setApp_name(fileName);
             list.add(user);
             if (list.size() == 50000){

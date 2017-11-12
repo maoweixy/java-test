@@ -12,5 +12,7 @@ public class TestEnum {
     public static void main(String args[]) throws JsonProcessingException {
         TypeEnumWithValue typeEnumWithValue = TypeEnumWithValue.TYPE1;
         System.out.println(MAPPER.writeValueAsString(typeEnumWithValue));
+        System.out.println(Gender.forValue(String.valueOf(4)));
+
     }
 }

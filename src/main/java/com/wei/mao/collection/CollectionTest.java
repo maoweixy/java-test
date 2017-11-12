@@ -1,6 +1,8 @@
 package com.wei.mao.collection;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -10,8 +12,11 @@ import java.util.Map;
  */
 public class CollectionTest {
     public static void main(String args[]){
-        Map<String,String> map = new HashMap<>();
-        map.put("1", "123");
-
+        List<String> list = new ArrayList<>();
+        list.add("123");
+        list.add("123");
+        list.add("123");
+        List<String> list1 = list.subList(0, 1);
+        System.out.println(list1);
     }
 }
