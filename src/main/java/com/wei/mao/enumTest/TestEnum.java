@@ -1,18 +1,15 @@
 package com.wei.mao.enumTest;
 
 import com.amazonaws.athena.jdbc.shaded.jackson.core.JsonProcessingException;
-import com.amazonaws.athena.jdbc.shaded.jackson.databind.ObjectMapper;
+import com.wei.mao.Utils.JsonUtils;
 
 /**
  * @Author 毛伟
  * @Date 10/16/17  17:53
  */
 public class TestEnum {
-    private static final ObjectMapper MAPPER = new ObjectMapper();
     public static void main(String args[]) throws JsonProcessingException {
-        TypeEnumWithValue typeEnumWithValue = TypeEnumWithValue.TYPE1;
-        System.out.println(MAPPER.writeValueAsString(typeEnumWithValue));
-        System.out.println(Gender.forValue(String.valueOf(4)));
-
+        int i = 1;
+        System.out.println(i+=800);
     }
 }

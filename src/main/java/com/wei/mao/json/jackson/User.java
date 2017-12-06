@@ -1,10 +1,12 @@
-package com.wei.mao.json;
+package com.wei.mao.json.jackson;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.amazonaws.athena.jdbc.shaded.jackson.annotation.JsonIgnore;
 import com.amazonaws.athena.jdbc.shaded.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.wei.mao.Utils.GenericDateDeserializer;
 import com.wei.mao.enumTest.Day;
 import com.wei.mao.enumTest.TypeEnumWithValue;
 import lombok.Data;
@@ -19,13 +21,8 @@ import java.time.LocalDateTime;
 @Data
 public class User {
     private String name;
-    private int age;
-    private TypeEnumWithValue typeEnumWithValue;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
-    private LocalDateTime localDateTime;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonDeserialize(using = GenericDateDeserializer.class)
+    protected LocalDateTime createTime;
 
-    @JsonValue
-    public String getwawa() {
-        return name;
-    }
 }

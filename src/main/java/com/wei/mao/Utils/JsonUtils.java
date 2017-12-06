@@ -2,6 +2,7 @@ package com.wei.mao.Utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.wei.mao.exception.JsonException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -37,5 +38,9 @@ public abstract class JsonUtils {
             log.warn(e.getMessage());
             throw new JsonException(e.getMessage() + ". " + obj);
         }
+    }
+
+    public static ObjectNode createObjectNode() {
+        return MAPPER.createObjectNode();
     }
 }

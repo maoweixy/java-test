@@ -20,7 +20,7 @@ public class BuildTest {
         //System.out.println(JsonUtils.serialize(property));
 
         ResultData resultData = ResultData.builder().build();
-        System.out.println(resultData.toString());
+        System.out.println(resultData);
 
     }
 }

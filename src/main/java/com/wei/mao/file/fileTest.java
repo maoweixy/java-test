@@ -15,12 +15,10 @@ import java.util.Set;
 
 public class fileTest {
     public static void main(String args[]) throws IOException {
-        File file = new File("/Users/maowei/Downloads/duid.txt");
-        //for (int i = 0; i < 1000000; i++) {
-        //    FileUtils.writeStringToFile(file, DigestUtils.md5Hex(String.valueOf(i))+"\n", true);
-        //}
-        Set<String> set = new HashSet<>(FileUtils.readLines(file));
-        System.out.println(set.size());
-        System.out.println("done");
+
+        File file = new File("/Users/maowei/Downloads/test.txt");
+        System.out.println(file.getPath());
+        System.out.println(file.getName());
+        System.out.println(file.getAbsolutePath());
     }
 }
