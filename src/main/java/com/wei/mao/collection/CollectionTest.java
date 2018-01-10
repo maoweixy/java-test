@@ -1,9 +1,7 @@
 package com.wei.mao.collection;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Author 毛伟

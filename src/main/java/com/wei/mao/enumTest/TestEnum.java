@@ -1,7 +1,6 @@
 package com.wei.mao.enumTest;
 
 import com.amazonaws.athena.jdbc.shaded.jackson.core.JsonProcessingException;
-import com.wei.mao.Utils.JsonUtils;
 
 /**
  * @Author 毛伟

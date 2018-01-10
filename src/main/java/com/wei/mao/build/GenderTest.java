@@ -1,8 +1,5 @@
 package com.wei.mao.build;
 
-import com.wei.mao.Utils.JsonUtils;
-import netscape.javascript.JSUtil;
-
 /**
  * @Author 毛伟
  * @Date 10/17/17  16:07

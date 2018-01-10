@@ -1,17 +1,10 @@
 package com.wei.mao.json.jackson;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import com.amazonaws.athena.jdbc.shaded.jackson.annotation.JsonIgnore;
-import com.amazonaws.athena.jdbc.shaded.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.wei.mao.Utils.GenericDateDeserializer;
-import com.wei.mao.enumTest.Day;
-import com.wei.mao.enumTest.TypeEnumWithValue;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**

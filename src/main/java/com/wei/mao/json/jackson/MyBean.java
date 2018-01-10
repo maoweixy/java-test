@@ -1,10 +1,8 @@
 package com.wei.mao.json.jackson;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 
 /**
  * @Author 毛伟

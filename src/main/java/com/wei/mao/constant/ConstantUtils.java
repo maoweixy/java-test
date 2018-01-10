@@ -1,8 +1,6 @@
 package com.wei.mao.constant;
 
 
-import org.apache.commons.lang3.StringUtils;
-
 /**
  * @Author 毛伟
  * @Date 10/9/17  18:08

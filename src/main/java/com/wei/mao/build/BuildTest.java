@@ -1,9 +1,5 @@
 package com.wei.mao.build;
 
-import com.alibaba.fastjson.JSON;
-import com.amazonaws.athena.jdbc.shaded.jackson.databind.ObjectMapper;
-import com.wei.mao.Utils.JsonUtils;
-
 /**
  * @Author 毛伟
  * @Date 10/17/17  10:13

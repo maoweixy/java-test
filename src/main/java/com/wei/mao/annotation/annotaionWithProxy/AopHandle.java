@@ -2,7 +2,6 @@ package com.wei.mao.annotation.annotaionWithProxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
 
 /**
  * @Author 毛伟

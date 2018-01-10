@@ -1,6 +1,8 @@
 package com.wei.mao.guava.cache;
 
-import com.google.common.cache.*;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
 
 import java.util.concurrent.ExecutionException;
 

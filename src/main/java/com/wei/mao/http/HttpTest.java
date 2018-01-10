@@ -4,8 +4,6 @@ import com.kikatech.krupp.http.HttpRequest;
 import com.kikatech.krupp.http.HttpResponse;
 import org.apache.http.HttpException;
 
-import java.io.IOException;
-
 /**
  * @Author 毛伟
  * @Date 11/22/17  18:18
