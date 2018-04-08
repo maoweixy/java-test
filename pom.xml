@@ -4,20 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <properties>
-
-        <!-- log4j日志文件管理包版本 -->
-        <slf4j.version>1.7.7</slf4j.version>
+        <Athena-JDBC.version>1.0.RELEASE</Athena-JDBC.version>
+        <athena_query_kika_tool>1.0.2.RELEASE</athena_query_kika_tool>
+        <jackson.datatype.version>2.7.4</jackson.datatype.version>
         <log4j2.version>2.6.1</log4j2.version>
-        <!--  spring版本号 -->
-        <spring.version>4.3.10.RELEASE</spring.version>
-        <!-- mybatis版本号 -->
-        <mybatis.version>3.2.6</mybatis.version>
         <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <Athena-JDBC.version>1.0.RELEASE</Athena-JDBC.version>
-        <jackson.datatype.version>2.7.4</jackson.datatype.version>
-        <athena_query_kika_tool>1.0.2.RELEASE</athena_query_kika_tool>
+        <slf4j.version>1.7.7</slf4j.version>
+        <scala.version>2.11.11</scala.version>
+        <spark.version>2.2.1</spark.version>
     </properties>
     <groupId>com.maowei</groupId>
     <artifactId>java-test</artifactId>
@@ -35,9 +31,6 @@
 
 
     <dependencies>
-
-
-
         <!-- 格式化对象，方便输出日志 -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -67,11 +60,6 @@
             <artifactId>krupp</artifactId>
             <version>0.2.4.4</version>
         </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.6</version>
-        </dependency>
 
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -85,6 +73,12 @@
             <version>1.16.18</version>
         </dependency>
 
+        <!--json-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.6</version>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
@@ -94,12 +88,6 @@
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jdk8</artifactId>
             <version>${jackson.datatype.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jsoup</groupId>
-            <artifactId>jsoup</artifactId>
-            <version>1.8.3</version>
         </dependency>
 
         <!--Excel-->
@@ -114,11 +102,13 @@
             <version>3.16</version>
         </dependency>
 
+        <!--aws-->
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk</artifactId>
             <version>1.11.163</version>
         </dependency>
+
         <!-- Athena -->
         <dependency>
             <groupId>com.amazonaws</groupId>
@@ -129,6 +119,26 @@
             <groupId>com.kika.tech</groupId>
             <artifactId>athena_query_kika_tool</artifactId>
             <version>${athena_query_kika_tool}</version>
+        </dependency>
+
+        <!--scala-->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- spark -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>${spark.version}</version>
         </dependency>
     </dependencies>
 

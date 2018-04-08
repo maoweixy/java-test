@@ -15,14 +15,15 @@ public class CsvTest {
         User user = new User();
         user.setDuid("mao");
         user.setApp_name("wei");
-        PrintWriter pw = new PrintWriter(new File("test.csv"));
+        PrintWriter pw = new PrintWriter(new File("/tmp/test.csv"));
         StringBuilder sb = new StringBuilder();
         sb.append(user.getFields());
         sb.append('\n');
 
-        sb.append(user.toString());
-        sb.append('\n');
-
+        for (int i = 0; i < 2000000; i++) {
+            sb.append(user.toString());
+            sb.append('\n');
+        }
         pw.write(sb.toString());
         pw.close();
         System.out.println("done!");

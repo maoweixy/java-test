@@ -8,6 +8,8 @@ import java.io.File;
  * @Date 17/7/14  15:39
  */
 public class fileUtils {
+    public static final String fileName = "/Users/maowei/Downloads/222";
+
     public static void getFileName(String path) {
         File f = new File(path);
         if (!f.exists()) {

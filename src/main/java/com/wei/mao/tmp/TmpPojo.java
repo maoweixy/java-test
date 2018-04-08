@@ -1,5 +1,6 @@
 package com.wei.mao.tmp;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -7,7 +8,13 @@ import lombok.Data;
  * @Date 11/27/17  16:16
  */
 @Data
-public class TmpPojo {
+@AllArgsConstructor
+public class TmpPojo implements Cloneable{
     private int id;
     private String name;
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }

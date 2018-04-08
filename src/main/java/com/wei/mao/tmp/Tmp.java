@@ -1,44 +1,41 @@
 package com.wei.mao.tmp;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.wei.mao.pojo.User;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+
 
 /**
  * @Author 毛伟
  * @Date 11/20/17  15:01
  */
 public class Tmp {
-    public static void main(String[] args) {
-        String s = "{\"domain_ads" +
-                "\":[{\"domain_url\":\"Amazon.com\",\"domain_ad_url\":\"kika.ampxdirect" +
-                ".com/amazon-k\"}," +
-                "{\"domain_url\":\"Booking.com\",\"domain_ad_url\":\"kika.ampxdirect" +
-                ".com/booking-k\"}," + "{\"domain_url\":\"Fidelity.com\",\"domain_ad_url\":\"kika" +
-                ".ampxdirect.com/fidelity-k\"}," +
-                "{\"domain_url\":\"Homedepot.com\",\"domain_ad_url\":\"kika.ampxdirect" +
-                ".com/homedepot-k\"}," +
-                "{\"domain_url\":\"Honda.com\",\"domain_ad_url\":\"kika.ampxdirect.com/honda-k\"}," +
-                "{\"domain_url\":\"Hotels.com\",\"domain_ad_url\":\"kika.ampxdirect.com/hotels-k\"}," +
-                "{\"domain_url\":\"Jcpenney.com\",\"domain_ad_url\":\"kika.ampxdirect" +
-                ".com/jcpenney-k\"}," +
-                "{\"domain_url\":\"Kohls.com\",\"domain_ad_url\":\"kika.ampxdirect.com/kohls-k\"}," +
-                "{\"domain_url\":\"Macys.com\",\"domain_ad_url\":\"kika.ampxdirect.com/macys-k\"}," +
-                "{\"domain_url\":\"Nordstrom.com\",\"domain_ad_url\":\"kika.ampxdirect" +
-                ".com/nordstrom-k\"}," +
-                "{\"domain_url\":\"Target.com\",\"domain_ad_url\":\"kika.ampxdirect.com/target-k\"}," +
-                "{\"domain_url\":\"Travelocity.com\",\"domain_ad_url\":\"kika.ampxdirect" +
-                ".com/travelocity-k\"}," +
-                "{\"domain_url\":\"Uber.com\",\"domain_ad_url\":\"kika.ampxdirect.com/uber-k\"}," +
-                "{\"domain_url\":\"Victoriasecret.com\",\"domain_ad_url\":\"kika.ampxdirect" +
-                ".com/victoriasecret-k\"},{\"domain_url\":\"Volvo.com\",\"domain_ad_url\":\"kika" +
-                ".ampxdirect" +
-                ".com/volvo-k\"}]}";
+    public static void main(String[] args) throws IOException {
+        String s = "maowei";
+        byte[] bytes = s.getBytes(StandardCharsets.UTF_8);
+        System.out.println(new String(bytes, StandardCharsets.UTF_8));
+        System.out.println(Arrays.toString(bytes));
+        System.out.println(Integer.toBinaryString(8));
+        String str = "CC%";
+        String result = "";
+        char[] messChar = str.toCharArray();
+        int a = (int) 'c';
+        System.out.println(a);
 
+        for (int i = 0; i < messChar.length; i++) {
+            result += Integer.toBinaryString(messChar[i]) + " ";
+        }
 
-        List<String> list = new ArrayList<>();
-        list.add("1");
+        System.out.println(result);
+    }
 
-        System.out.println(s);
+    public static User getUser(String duid, String appName) {
+        User user = new User();
+        user.setDuid(duid);
+        user.setApp_name(appName);
+        return user;
     }
 
 }
