@@ -18,16 +18,16 @@
     <groupId>com.maowei</groupId>
     <artifactId>java-test</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <repositories>
-        <repository>
-            <id>maven_center</id>
-            <url>http://192.168.100.71:8081/nexus/content/repositories/maven_center</url>
-        </repository>
-        <repository>
-            <id>releases</id>
-            <url>http://192.168.100.71:8081/nexus/content/repositories/releases/</url>
-        </repository>
-    </repositories>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>maven_center</id>-->
+<!--            <url>http://192.168.100.71:8081/nexus/content/repositories/maven_center</url>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>releases</id>-->
+<!--            <url>http://192.168.100.71:8081/nexus/content/repositories/releases/</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
 
     <dependencies>
@@ -55,11 +55,11 @@
             <version>3.3.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.kikatech</groupId>
-            <artifactId>krupp</artifactId>
-            <version>0.2.4.4</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.kikatech</groupId>-->
+<!--            <artifactId>krupp</artifactId>-->
+<!--            <version>0.2.4.4</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -102,24 +102,13 @@
             <version>3.16</version>
         </dependency>
 
-        <!--aws-->
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk</artifactId>
-            <version>1.11.163</version>
-        </dependency>
+<!--        &lt;!&ndash;aws&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.amazonaws</groupId>-->
+<!--            <artifactId>aws-java-sdk</artifactId>-->
+<!--            <version>1.11.163</version>-->
+<!--        </dependency>-->
 
-        <!-- Athena -->
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>Athena-JDBC</artifactId>
-            <version>${Athena-JDBC.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.kika.tech</groupId>
-            <artifactId>athena_query_kika_tool</artifactId>
-            <version>${athena_query_kika_tool}</version>
-        </dependency>
 
         <!--scala-->
         <dependency>
@@ -128,11 +117,11 @@
             <version>${scala.version}</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-compiler</artifactId>
-            <scope>compile</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.scala-lang</groupId>-->
+<!--            <artifactId>scala-compiler</artifactId>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
 
         <!-- spark -->
         <dependency>
@@ -181,27 +170,27 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.3</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.kikakeyboard.waveform.athena.Main</mainClass>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-shade-plugin</artifactId>-->
+<!--                <version>2.4.3</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>shade</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <transformers>-->
+<!--                                <transformer-->
+<!--                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
+<!--                                    <mainClass>com.kikakeyboard.waveform.athena.Main</mainClass>-->
+<!--                                </transformer>-->
+<!--                            </transformers>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>

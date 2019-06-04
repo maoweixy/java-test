@@ -12,24 +12,12 @@ import java.util.Arrays;
  * @Date 11/20/17  15:01
  */
 public class Tmp {
-    public static void main(String[] args) throws IOException {
-        String s = "maowei";
-        byte[] bytes = s.getBytes(StandardCharsets.UTF_8);
-        System.out.println(new String(bytes, StandardCharsets.UTF_8));
-        System.out.println(Arrays.toString(bytes));
-        System.out.println(Integer.toBinaryString(8));
-        String str = "CC%";
-        String result = "";
-        char[] messChar = str.toCharArray();
-        int a = (int) 'c';
-        System.out.println(a);
-
-        for (int i = 0; i < messChar.length; i++) {
-            result += Integer.toBinaryString(messChar[i]) + " ";
-        }
-
-        System.out.println(result);
+    public static void main(String[] args) throws Exception {
+        String s = "听完竟然有点心动";
+        s.replace("竟然有点", "久违");
+        System.out.println(s);
     }
+
 
     public static User getUser(String duid, String appName) {
         User user = new User();

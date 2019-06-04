@@ -1,7 +1,6 @@
-package com.wei.mao.file;
+package com.wei.mao.IOStream.file;
 
 import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 

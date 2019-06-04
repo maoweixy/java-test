@@ -1,7 +1,6 @@
-package com.wei.mao.file;
+package com.wei.mao.IOStream.file;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -23,7 +22,7 @@ public class ReaderTest {
             //result += new String(buf);
             result += new String(buf, 0, temp);
         }
-        //reader.close();
+        reader.close();
         System.out.println(result);
     }
 
@@ -36,8 +35,7 @@ public class ReaderTest {
         while ((temp = bufferedReader.readLine()) != null) {
             result += temp;
         }
-        //fileReader.close();
-        //bufferedReader.close();
+        bufferedReader.close();
         System.out.println(result);
     }
 

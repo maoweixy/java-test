@@ -1,4 +1,4 @@
-package com.wei.mao.file;
+package com.wei.mao.IOStream.file;
 
 import java.io.File;
 
@@ -8,7 +8,7 @@ import java.io.File;
  * @Date 17/7/14  15:39
  */
 public class fileUtils {
-    public static final String fileName = "/Users/maowei/Downloads/222";
+    public static final String fileName = "222.txt";
 
     public static void getFileName(String path) {
         File f = new File(path);
